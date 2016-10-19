@@ -4,6 +4,6 @@ const ourSponsors = [
  {name:"Facebook",amt:"$40 million"},
 ]
 
-Template.sponsors.helpers({
+Template.reserve.helpers({
 	sponsorData: ourSponsors
 })
