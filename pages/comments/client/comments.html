@@ -4,4 +4,14 @@ Please leave a comment:
 <textarea id="comment" cols="100%" rows="10"></textarea>	
 <br>
 <button id="submitcomment" class="btn btn-info"> Submit Comment</button>
+<br>
+Here are all the comments!
+<br>
+
+<ul>
+{{#each comment in commentlist}}
+<li>{{c.date}}: {{c.comment}}</li>l
+{{/each}}
+</ul>
+
 </template>
