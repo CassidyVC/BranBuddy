@@ -5,24 +5,53 @@
    <img src="http://vtautismtaskforce.org/wp-content/uploads/2015/03/join.jpg">
 
    <h3>Fill out this quick application and you will be well on your way to becomeing a BranBuddy!</h3>
-
-   My Profile...<br>
-Your name: <Input type="text" id="name"><br>
-Your age: <input type="text" id="age"> <br>
-Your bio: <textarea id="bio"></textarea> <br>
-Will you be commited?: <div class="radio">
-  <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-    Yes
-  </label>
-</div>
-<div class="radio">
-  <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-    No
-  </label>
-</div>
-Why Do you want to be a BranBuddy?: <textarea id="BranBuddy"> </textarea> <br>
-<input type="submit" id="submit">
+    
+     My Profile...<br>
+<form class="form-horizontal">
+	<div class="form-group">
+		<label for="name" class="col-sm-3 control-label">Your Name</label>
+		<div class="col-sm-6"> 
+			<input type="text" id="name" class="form-control">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-3 control-label" for="age">Your Age</label>
+		<div class="col-sm-6"><input type="text" id="age" class="form-control"> </div>
+	</div>
+	<div class="form-group">
+		<label for="Your CellPhone" class="col-sm-3 control-label">Your CellPhone</label>
+		<div class="col-sm-6"><input type="text" id="CellPhone" class="form-control"></div>
+	</div>
+	<div class="form-group">
+		<label for="bio" class="col-sm-3 control-label">Your Bio</label>
+		<div class="col-sm-6"><textarea id="bio" class="form-control"></textarea></div>
+	</div>
+	<div class="form-group">
+		<label for="Why do you want to be a BranBuddy?" class="col-sm-3 control-label">Why do you want to be a BranBuddy?</label>
+		<div class="col-sm-6"><textarea id="BranBuddy" class="form-control"></textarea></div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-3 control-label">Will you be commited?</label>
+		<div class="col-sm-6">
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+			    Yes
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+			    No
+			  </label>
+			</div>
+		</div>
+	</div>
+<div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+      <button type="submit" class="btn btn-info">Submit</button>
+    </div>
+  </div>
+</form>
 </template>
 
