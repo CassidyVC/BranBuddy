@@ -6,8 +6,8 @@ Template.reserve.events({
 	const name = $("#name").val();
 	const age = $("#age").val();
     const location = $("#location").val();
-    const destination = $("destination").val();
-    const time = $("time").val();
+    const destination = $("#destination").val();
+    const time = $("#time").val();
 	const date = new Date();
 	const jsonobj = {name:name,age:age,location:location,destination:destination,time:time,date:date};
 	Reserve.insert(jsonobj);
@@ -16,5 +16,6 @@ Template.reserve.events({
 
 
 Template.reserve.helpers({
+	buddylist: function(){return Reserve.find();}
 
 })
