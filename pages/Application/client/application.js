@@ -8,7 +8,7 @@ Template.Apply.events({
 	const Branbuddy = $("#Branbuddy").val();
 	const date = new Date();
 
-	const jsonobj = {name:name, age:age, cellphone:cellphone, bio:bio, Branbuddy:Branbuddy date:date};
+	const jsonobj = {name:name, age:age, cellphone:cellphone, bio:bio, Branbuddy:Branbuddy, date:date};
 
 	BranBuddies.insert(jsonobj);
 }
