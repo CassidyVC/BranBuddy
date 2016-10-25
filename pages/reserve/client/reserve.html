@@ -36,6 +36,19 @@
 
 {{#each buddy in buddylist}}
 {{buddy.name}} is going to {{buddy.destination}} from {{buddy.location}} at {{buddy.time}}
+<br>
+<textarea id="comment" cols="50%" rows="2"></textarea>	
+<br>
+<button id="submitcomment" class="btn btn-info"> Submit Comment</button>
+
+<ul>
+{{#each c in buddylist}}
+<li>{{c.date}}: {{c.reserve}}</li>
+{{/each}}
+</ul>
+<br>
 <hr>
 {{/each}}
+
+
 </template>
