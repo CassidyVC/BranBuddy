@@ -53,5 +53,22 @@
     </div>
   </div>
 </form>
+
+{{#each buddy in application}}
+{{application.name}} is {{application.age}} contact at {{application.cellphone}} more about {{application.bio}} they want to be a BranBuddy because {{application.branBuddy}} will they be commited? {{application.commited}}
+<br>
+<textarea id="comment" cols="50%" rows="2"></textarea>	
+<br>
+<button id="submitcomment" class="btn btn-info"> Submit Comment</button>
+
+<ul>
+{{#each a in application}}
+<li>{{a.date}}: {{a.reserve}}</li>
+{{/each}}
+</ul>
+<br>
+<hr>
+{{/each}}
+
 </template>
 
