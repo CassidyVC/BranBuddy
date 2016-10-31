@@ -25,7 +25,6 @@
 		<label for="time" class="col-sm-3 control-label">Time</label>
 		<div class="col-sm-6"><input type="text" id="time" class="form-control"></div>
 	</div>
-  </div>
   <div class="form-group">
 		<label for="cellphone" class="col-sm-3 control-label">Cellphone</label>
 		<div class="col-sm-6"><input type="text" id="time" class="form-control"></div>
@@ -34,27 +33,17 @@
 		<label for="email" class="col-sm-3 control-label">Email</label>
 		<div class="col-sm-6"><input type="text" id="time" class="form-control"></div>
 	</div>
-	<div class="form-group">
+<div class="form-group">
     <div class="col-sm-offset-3 col-sm-9">
       <button type="submit" class="btn btn-info" id="submitreserve">Submit</button>
     </div>
+  </div>
 </form>
 
 
 {{#each buddy in buddylist}}
-{{buddy.name}} is going to {{buddy.destination}} from {{buddy.location}} at {{buddy.time}}
+{{buddy.name}} is going to {{buddy.destination}} from {{buddy.location}} at {{buddy.time}} contact at {{buddy.cellphone}} or {{buddy.emial}}
 <br>
-<textarea id="comment" cols="50%" rows="2"></textarea>	
-<br>
-<button id="submitcomment" class="btn btn-info"> Submit Comment</button>
-
-<ul>
-{{#each c in buddylist}}
-<li>{{c.date}}: {{c.reserve}}</li>
-{{/each}}
-</ul>
-<br>
-<hr>
 {{/each}}
 
 
