@@ -25,7 +25,14 @@
 		<label for="time" class="col-sm-3 control-label">Time</label>
 		<div class="col-sm-6"><input type="text" id="time" class="form-control"></div>
 	</div>
-
+  <div class="form-group">
+		<label for="cellphone" class="col-sm-3 control-label">Cellphone</label>
+		<div class="col-sm-6"><input type="text" id="time" class="form-control"></div>
+	</div>
+	<div class="form-group">
+		<label for="email" class="col-sm-3 control-label">Email</label>
+		<div class="col-sm-6"><input type="text" id="time" class="form-control"></div>
+	</div>
 <div class="form-group">
     <div class="col-sm-offset-3 col-sm-9">
       <button type="submit" class="btn btn-info" id="submitreserve">Submit</button>
@@ -35,7 +42,17 @@
 
 
 {{#each buddy in buddylist}}
-{{buddy.name}} is going to {{buddy.destination}} from {{buddy.location}} at {{buddy.time}}
-<hr>
+{{buddy.name}} is going to {{buddy.destination}} from {{buddy.location}} at {{buddy.time}} contact at {{buddy.cellphone}} or {{buddy.emial}}
+<br>
 {{/each}}
+
+<<<<<<< HEAD
+<style>
+body {
+    background-color: lightcoral;
+}
+</style>
+=======
+
+>>>>>>> origin/master
 </template>
