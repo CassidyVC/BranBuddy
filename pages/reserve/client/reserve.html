@@ -33,11 +33,11 @@ body {
 	</div>
   <div class="form-group">
 		<label for="cellphone" class="col-sm-3 control-label">Cellphone</label>
-		<div class="col-sm-6"><input type="text" id="time" class="form-control"></div>
+		<div class="col-sm-6"><input type="text" id="cellphone" class="form-control"></div>
 	</div>
 	<div class="form-group">
 		<label for="email" class="col-sm-3 control-label">Email</label>
-		<div class="col-sm-6"><input type="text" id="time" class="form-control"></div>
+		<div class="col-sm-6"><input type="text" id="email" class="form-control"></div>
 	</div>
 <div class="form-group">
     <div class="col-sm-offset-3 col-sm-9">
@@ -48,7 +48,7 @@ body {
 
 
 {{#each buddy in buddylist}}
-{{buddy.name}} is going to {{buddy.destination}} from {{buddy.location}} at {{buddy.time}} contact at {{buddy.cellphone}} or {{buddy.emial}}
+{{buddy.name}} is going to {{buddy.destination}} from {{buddy.location}} at {{buddy.time}} contact at {{buddy.cellphone}} or {{buddy.email}}
 <br>
 {{/each}}
 

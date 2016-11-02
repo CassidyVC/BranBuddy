@@ -1,6 +1,6 @@
 Template.reserve.events({
 "click #submitreserve": function(event){
-	
+	event.preventDefault();
 	console.log("hey we clicked it");
 	alert("yay!");
 	const name = $("#name").val();
@@ -8,8 +8,8 @@ Template.reserve.events({
     const location = $("#location").val();
     const destination = $("#destination").val();
     const time = $("#time").val();
-    const.cellphone = $("#cellphone").val();
-    const.email = $("#email").val();
+    const cellphone = $("#cellphone").val();
+    const email = $("#email").val();
 	const date = new Date();
 	const jsonobj = {name:name,age:age,location:location,destination:destination,time:time,cellphone:cellphone,email:email,date:date};
 	Reserve.insert(jsonobj);
