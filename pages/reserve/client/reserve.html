@@ -8,6 +8,7 @@ body {
 <div class="reserve">
 	Reserve Your Buddy!<br>
 
+{{#if currentUser}}
 <form class="form-horizontal">
 	<div class="form-group">
 		<label for="name" class="col-sm-3 control-label">Your Name</label>
@@ -33,12 +34,9 @@ body {
 	</div>
   <div class="form-group">
 		<label for="cellphone" class="col-sm-3 control-label">Cellphone</label>
-		<div class="col-sm-6"><input type="text" id="time" class="form-control"></div>
+		<div class="col-sm-6"><input type="text" id="cellphone" class="form-control"></div>
 	</div>
-	<div class="form-group">
-		<label for="email" class="col-sm-3 control-label">Email</label>
-		<div class="col-sm-6"><input type="text" id="time" class="form-control"></div>
-	</div>
+
 <div class="form-group">
     <div class="col-sm-offset-3 col-sm-9">
       <button type="submit" class="btn btn-info" id="submitreserve">Submit</button>
@@ -46,12 +44,34 @@ body {
   </div>
 </form>
 
-
+{{#if isBranBuddy}}
 {{#each buddy in buddylist}}
-{{buddy.name}} is going to {{buddy.destination}} from {{buddy.location}} at {{buddy.time}} contact at {{buddy.cellphone}} or {{buddy.emial}}
-<br>
+
+{{buddy.name}} is going to {{buddy.destination}} from {{buddy.location}} at {{buddy.time}} contact at {{buddy.cellphone}}<br>
+<form class="buddyComment">
+<textarea class="form-control"></textarea>
+<button type="submit" class="btn btn-info">Comment</button>
+</form>
 {{/each}}
 
+
+
+{{else}}
+	{{#each buddy in myReserveRequests}}
+		<a href="" class="deleteRequest">Delete</a>
+		{{buddy.name}} is going to {{buddy.destination}} from {{buddy.location}} at {{buddy.time}} contact at {{buddy.cellphone}}<br>
+	{{/each}}
+{{/if}}
+
+
+{{else}}
+You must log in to see this page
+{{/if}}
+
 </div>
+
+</template>
+
+<template name="buddy">
 
 </template>

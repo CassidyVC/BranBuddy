@@ -1,5 +1,6 @@
 Template.Apply.events({
 "click #submit": function(event){
+	event.preventDefault();
 
 	const name = $("#name").val();
 	const age = $("#age").val();
@@ -7,8 +8,11 @@ Template.Apply.events({
 	const bio = $("#bio").val();
 	const Branbuddy = $("#Branbuddy").val();
 	const date = new Date();
+	const userId = Meteor.userId();
 
-	const jsonobj = {name:name, age:age, cellphone:cellphone, bio:bio, Branbuddy:Branbuddy, date:date};
+	const jsonobj = 
+	{name:name, age:age, cellphone:cellphone, bio:bio, 
+		Branbuddy:Branbuddy, date:date, userId:userId};
 
 	BranBuddies.insert(jsonobj);
 }
