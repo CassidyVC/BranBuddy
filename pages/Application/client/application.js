@@ -8,7 +8,14 @@ Template.Apply.events({
 	const Branbuddy = $("#Branbuddy").val();
 	const date = new Date();
 
-	const jsonobj = {name:name, age:age, cellphone:cellphone, bio:bio, Branbuddy:Branbuddy, date:date};
+	if ($('#committed').attr('checked','checked')) {
+		var committed = true;
+	}
+	else {
+		var committed = false;
+	}
+
+	const jsonobj = {name:name, age:age, cellphone:cellphone, bio:bio, Branbuddy:Branbuddy, date:date, committed:committed};
 
 	BranBuddies.insert(jsonobj);
 }
