@@ -10,5 +10,10 @@ Template.comments.events({
 
 
 Template.comments.helpers({
+<<<<<<< Updated upstream
 commentlist: function() {return Comments.find();}
+=======
+
+
+>>>>>>> Stashed changes
 })
