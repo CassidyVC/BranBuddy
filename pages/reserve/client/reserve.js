@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 Template.reserve.events({
 "click #submitreserve": function(event){
 	event.preventDefault();
@@ -14,7 +14,9 @@ Template.reserve.events({
 	const date = new Date();
 	const jsonobj = {name:name,age:age,location:location,destination:destination,time:time,cellphone:cellphone,email:email,date:date};
 	Reserve.insert(jsonobj);
-=======
+}
+})
+
 Template.comments.events({
 "click #submitcomment": function(event){
 	
@@ -24,19 +26,19 @@ Template.comments.events({
 	const date = new Date();
 	const jsonobj = {comment:comment, date:date};
 	Comments.insert(jsonobj);
->>>>>>> Stashed changes
+
 }
 })
 
 
-<<<<<<< Updated upstream
+
 Template.reserve.helpers({
 	buddylist: function(){return Reserve.find();}
 
 })
-=======
+
 Template.comments.helpers({
 
 
 })
->>>>>>> Stashed changes
+
