@@ -1,7 +1,24 @@
 <template name="review">
-	
-{{#each application in buddylist}}
-{{application.name}} is {{application.age}} years old. My cellphone number is {{application.cellphone}}, more about me {{application.bio}}.I want to be a BranBuddy because {{application.Branbuddy}} Will i be committed? {{application.committed}}
-<br>
+
+<table class="table table-striped table-bordered">
+<tbody>
+<tr> <td>Name</td><td>Age</td><td>Number</td><td>Bio</td><td>Reason</td><td>Will be commited</td><td>Approve</td></tr>
+{{#each application in approvelist}}
+<tr><td>{{application.name}}</td><td>{{application.age}}</td><td>{{application.cellphone}}</td><td>{{application.bio}}</td><td>{{application.Branbuddy}}</td><td>{{application.committed}}</td>
+<td>{{#with application}}<a href="#" class="approveRequest">Approve buddy</a>{{/with}}</td></tr>
 {{/each}}
+</tbody>
+</table>
+
+<table class="table table-striped table-bordered">
+<tbody>
+<tr> <td>Name</td><td>Age</td><td>Number</td><td>Bio</td><td>Reason</td><td>Will be commited</td><td>Delete</td></tr>
+{{#each application in buddylist}}
+<tr><td>{{application.name}}</td><td>{{application.age}}</td><td>{{application.cellphone}}</td><td>{{application.bio}}</td><td>{{application.Branbuddy}}</td><td>{{application.committed}}</td>
+<td>{{#with application}}<a href="#" class="deleteRequest">Delete</a>{{/with}}</td></tr>
+
+
+{{/each}}
+</tbody>
+</table>
 </template>

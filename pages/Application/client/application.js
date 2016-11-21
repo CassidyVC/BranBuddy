@@ -17,9 +17,9 @@ Template.Apply.events({
 		var committed = false;
 	}
 
-	const jsonobj = {name:name, age:age, cellphone:cellphone, bio:bio, Branbuddy:Branbuddy, date:date, committed:committed};
+	const jsonobj = {name:name, age:age, cellphone:cellphone, bio:bio, Branbuddy:Branbuddy, date:date, committed:committed,userId:userId};
 
-	BranBuddies.insert(jsonobj);
+	ToBeApproved.insert(jsonobj);
 }
 })
 

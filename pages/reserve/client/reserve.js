@@ -41,6 +41,7 @@ Template.reserve.helpers({
 	isBranBuddy: function(){
 		const myId = Meteor.userId();
 		const bb = BranBuddies.findOne({userId:myId});
+		console.log(bb)
 		return bb;
 	},
 
