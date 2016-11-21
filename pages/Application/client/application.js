@@ -10,9 +10,14 @@ Template.Apply.events({
 	const date = new Date();
 	const userId = Meteor.userId();
 
-	const jsonobj = 
-	{name:name, age:age, cellphone:cellphone, bio:bio, 
-		Branbuddy:Branbuddy, date:date, userId:userId};
+	if ($('#committed').attr('checked','checked')) {
+		var committed = true;
+	}
+	else {
+		var committed = false;
+	}
+
+	const jsonobj = {name:name, age:age, cellphone:cellphone, bio:bio, Branbuddy:Branbuddy, date:date, committed:committed};
 
 	BranBuddies.insert(jsonobj);
 }

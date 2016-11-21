@@ -1,3 +1,4 @@
+
 Template.reserve.events({
 "click #submitreserve": function(event){
 	event.preventDefault();
@@ -11,16 +12,12 @@ Template.reserve.events({
     const cellphone = $("#cellphone").val();
     const email = $("#email").val();
 	const date = new Date();
-<<<<<<< HEAD
 	const userId = Meteor.userId();
 	const cellphone = $("#cellphone").val();
 	const jsonobj = 
 	 {name:name,age:age,location:location,
 	 	  destination:destination,time:time,
 	 	  date:date, cellphone:cellphone, userId:userId};
-=======
-	const jsonobj = {name:name,age:age,location:location,destination:destination,time:time,cellphone:cellphone,email:email,date:date};
->>>>>>> origin/master
 	Reserve.insert(jsonobj);
 },
 'click .deleteRequest':function(event) {
@@ -28,6 +25,20 @@ Template.reserve.events({
 	Reserve.remove({_id:this._id});
 }
 })
+
+Template.comments.events({
+"click #submitcomment": function(event){
+	
+	console.log("hey we clicked it");
+	alert("yay!");
+	const comment = $("#comment").val();
+	const date = new Date();
+	const jsonobj = {comment:comment, date:date};
+	Comments.insert(jsonobj);
+
+}
+})
+
 
 
 Template.reserve.helpers({
@@ -44,3 +55,9 @@ Template.reserve.helpers({
 	}
 
 })
+
+Template.comments.helpers({
+
+
+})
+
