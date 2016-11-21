@@ -51,22 +51,23 @@ body {
 
 {{#if isBranBuddy}}
 {{#each buddy in buddylist}}
+{{#with buddy}}
 
-
+<a href="#" class="deleteRequest">Delete</a>
 {{buddy.name}} is going to {{buddy.destination}} from {{buddy.location}} at {{buddy.time}} contact at {{buddy.cellphone}}<br>
 <form class="buddyComment">
 <textarea class="form-control"></textarea>
 <button type="submit" class="btn btn-info">Comment</button>
 </form>
 
-
+{{/with}}
 {{/each}}
 
 
 
 {{else}}
 	{{#each buddy in myReserveRequests}}
-		<a href="" class="deleteRequest">Delete</a>
+		<a href="#" class="deleteRequest">Delete</a>
 		{{buddy.name}} is going to {{buddy.destination}} from {{buddy.location}} at {{buddy.time}} contact at {{buddy.cellphone}}<br>
 	{{/each}}
 {{/if}}

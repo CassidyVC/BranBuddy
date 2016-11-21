@@ -13,11 +13,7 @@ Template.reserve.events({
     const email = $("#email").val();
 	const date = new Date();
 	const userId = Meteor.userId();
-	const cellphone = $("#cellphone").val();
-	const jsonobj = 
-	 {name:name,age:age,location:location,
-	 	  destination:destination,time:time,
-	 	  date:date, cellphone:cellphone, userId:userId};
+	const jsonobj = {name:name,age:age,location:location, destination:destination,time:time, date:date, cellphone:cellphone, userId:userId};
 	Reserve.insert(jsonobj);
 },
 'click .deleteRequest':function(event) {
@@ -52,6 +48,11 @@ Template.reserve.helpers({
 
 	myReserveRequests:function() {
 		return Reserve.find({userId:Meteor.userId()});
+	},
+	sameUser:function() {
+		if (Meteor.userId() == this.userId) {
+			return '<a href="#" class="deleteRequest">Delete</a>'
+		}
 	}
 
 })
