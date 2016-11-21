@@ -6,19 +6,33 @@ body {
 </style>
 
 
-Please leave a comment:
+<h1>Leave Us a Comment!</h1>
 <br>
 <textarea id="comment" cols="100%" rows="10"></textarea>	
 <br>
 <button id="submitComment" class="btn btn-info"> Submit Comment</button>
 <br>
-Here are all the comments!
+<h1>Comments:</h1>
 <br>
 
-<ul>
+
+<table class="table table-striped table-bordered">
+<tbody>
+<tr><th>Date</th><th>Comment</th><th>Delete</th></tr>
 {{#each c in commentlist}}
-<li>{{c.date}}: {{c.comment}} {{#with c}}<a href="#" class="deleteRequest">Delete</a>{{/with}}</li>
+<tr>
+   <td>{{c.date}}</td>
+   <td>{{c.comment}}</td>
+   <td>
+      {{#with c}}
+          <a href="#" class="deleteRequest">Delete</a>
+      {{/with}}
+   </td>
+</tr>
+
+
 {{/each}}
-</ul>
+</tbody>
+</table>
 
 </template>
