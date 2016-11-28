@@ -17,7 +17,7 @@ Template.reserve.events({
 	Reserve.insert(jsonobj);
 },
 'click .deleteRequest':function(event) {
-	console.log(event.target);
+	console.log(this);
 	Reserve.remove({_id:this._id});
 }
 })
